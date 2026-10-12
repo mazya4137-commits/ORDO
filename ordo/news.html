@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Новости — ресторан «Ордо»</title>
+  <meta name="description" content="Новости и сезонные предложения ресторана «Ордо». Демонстрационные публикации можно изменить в data/news.json.">
+  <link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Ордо — на главную"><img src="assets/icons/logo-mark.svg" alt="" width="36" height="36">ОРДО</a>
+    <nav class="main-nav" id="mainNav" aria-label="Основная навигация"><ul>
+      <li><a href="index.html">Главная</a></li><li><a href="menu.html">Меню</a></li><li><a href="banquets.html">Банкеты</a></li><li><a href="gallery.html">Галерея</a></li><li><a href="news.html">Новости</a></li><li><a href="achievements.html">События</a></li><li><a href="contacts.html">Контакты</a></li>
+    </ul><a href="contacts.html#booking" class="btn btn-primary mobile-book">Забронировать столик</a></nav>
+    <a href="contacts.html#booking" class="btn-book">Забронировать столик</a><button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div></header><div class="nav-overlay" id="navOverlay"></div>
+  <main id="main"><section class="section"><div class="container">
+    <div class="section-header"><p class="eyebrow">Из жизни ресторана</p><h1>Новости и поводы встретиться</h1><div class="ornament-divider" aria-hidden="true"><img src="assets/icons/ornament.svg" alt=""></div><p>Следите за сезонными блюдами, музыкальными вечерами и праздничными предложениями. Примеры публикаций помечены как демонстрационные.</p></div>
+    <div class="events-grid" id="newsGrid" aria-live="polite"><p class="form-note">Загружаем новости…</p></div>
+  </div></section></main>
+  <div class="modal" id="newsModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="newsModalTitle"><div class="modal-content"><button class="modal-close" aria-label="Закрыть">×</button><div id="newsModalBody"></div></div></div>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h4>Ордо</h4><p>Кыргызская кухня и тёплое гостеприимство.</p></div><div><h4>Разделы</h4><a href="menu.html">Меню</a><a href="banquets.html">Банкеты</a><a href="gallery.html">Галерея</a></div><div><h4>Будем на связи</h4><a href="contacts.html">Контакты и бронирование</a><a href="achievements.html">События</a></div></div><div class="footer-bottom">© <span id="year"></span> Ресторан «Ордо». Демонстрационный сайт.</div></div></footer>
+  <script src="js/main.js"></script><script src="js/news.js"></script>
+</body></html>

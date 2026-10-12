@@ -1,0 +1,76 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "Все"
+    },
+    {
+      "id": "dishes",
+      "name": "Блюда"
+    },
+    {
+      "id": "interior",
+      "name": "Интерьер"
+    },
+    {
+      "id": "events",
+      "name": "Мероприятия"
+    }
+  ],
+  "images": [
+    {
+      "id": 1,
+      "src": "assets/images/food-beshbarmak.jpg",
+      "alt": "Бешбармак",
+      "category": "dishes"
+    },
+    {
+      "id": 2,
+      "src": "assets/images/food-manty.jpg",
+      "alt": "Манты",
+      "category": "dishes"
+    },
+    {
+      "id": 3,
+      "src": "assets/images/food-plov.jpg",
+      "alt": "Плов",
+      "category": "dishes"
+    },
+    {
+      "id": 4,
+      "src": "assets/images/interior.jpg",
+      "alt": "Уютный зал",
+      "category": "interior"
+    },
+    {
+      "id": 5,
+      "src": "assets/images/hero.jpg",
+      "alt": "VIP-комната",
+      "category": "interior"
+    },
+    {
+      "id": 6,
+      "src": "assets/images/interior.jpg",
+      "alt": "Национальный декор",
+      "category": "interior"
+    },
+    {
+      "id": 7,
+      "src": "assets/images/hero.jpg",
+      "alt": "Той",
+      "category": "events"
+    },
+    {
+      "id": 8,
+      "src": "assets/images/hero.jpg",
+      "alt": "Свадьба",
+      "category": "events"
+    },
+    {
+      "id": 9,
+      "src": "assets/images/interior.jpg",
+      "alt": "Корпоратив",
+      "category": "events"
+    }
+  ]
+}

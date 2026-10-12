@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>События и впечатления гостей — ресторан «Ордо»</title>
+  <meta name="description" content="Демонстрационные примеры прошедших мероприятий и отзывов о ресторане «Ордо». Реальные награды и рейтинги не заявляются.">
+  <link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Ордо — на главную"><img src="assets/icons/logo-mark.svg" alt="" width="36" height="36">ОРДО</a>
+    <nav class="main-nav" id="mainNav" aria-label="Основная навигация"><ul>
+      <li><a href="index.html">Главная</a></li><li><a href="menu.html">Меню</a></li><li><a href="banquets.html">Банкеты</a></li><li><a href="gallery.html">Галерея</a></li><li><a href="news.html">Новости</a></li><li><a href="achievements.html">События</a></li><li><a href="contacts.html">Контакты</a></li>
+    </ul><a href="contacts.html#booking" class="btn btn-primary mobile-book">Забронировать столик</a></nav>
+    <a href="contacts.html#booking" class="btn-book">Забронировать столик</a><button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div></header><div class="nav-overlay" id="navOverlay"></div>
+  <main id="main">
+    <section class="section"><div class="container">
+      <div class="section-header"><p class="eyebrow">Встречи, которые остаются с нами</p><h1>События и отзывы</h1><div class="ornament-divider" aria-hidden="true"><img src="assets/icons/ornament.svg" alt=""></div><p>Здесь собраны примеры карточек для будущих историй ресторана. Все события и отзывы ниже — демонстрационные, а не подтверждённые факты.</p></div>
+      <div class="form-note" role="note">На странице не заявлены реальные награды, сертификаты или подтверждённый рейтинг. Замените примеры фактическими материалами, прежде чем публиковать их как отзывы гостей.</div>
+      <h2 class="subsection-title">Примеры мероприятий</h2><div class="events-grid" id="eventsGrid" aria-live="polite"></div>
+    </div></section>
+    <section class="section section-soft"><div class="container"><div class="section-header"><p class="eyebrow">Слова гостей</p><h2>Примеры отзывов</h2></div><div class="reviews-grid" id="reviewsGrid" aria-live="polite"></div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h4>Ордо</h4><p>Кыргызская кухня и тёплое гостеприимство.</p></div><div><h4>Разделы</h4><a href="menu.html">Меню</a><a href="banquets.html">Банкеты</a><a href="gallery.html">Галерея</a></div><div><h4>Будем на связи</h4><a href="contacts.html">Контакты и бронирование</a><a href="news.html">Новости</a></div></div><div class="footer-bottom">© <span id="year"></span> Ресторан «Ордо». Демонстрационный сайт.</div></div></footer>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const { loadJSON, escapeHTML, imgFallback } = window.Ordo;
+      const data = await loadJSON('data/events.json');
+      const eventsGrid = document.getElementById('eventsGrid');
+      const reviewsGrid = document.getElementById('reviewsGrid');
+      if (!data) {
+        eventsGrid.innerHTML = '<p class="form-note">Не удалось загрузить примеры событий. Проверьте запуск через локальный HTTP-сервер.</p>';
+        return;
+      }
+      const events = data.events || [];
+      eventsGrid.innerHTML = events.length ? events.map(event => `
+        <article class="event-card reveal">
+          <img src="${escapeHTML(event.image)}" alt="${escapeHTML(event.title)}" loading="lazy" onerror="window.Ordo.imgFallback(this)">
+          <div class="event-body"><p class="event-date">${escapeHTML(event.date || '')}<span class="demo-badge">демо</span></p><h3>${escapeHTML(event.title)}</h3><p class="card-copy">${escapeHTML(event.description)}</p></div>
+        </article>`).join('') : '<div class="empty-state">Пока нет опубликованных событий.</div>';
+      const reviews = data.reviews || [];
+      reviewsGrid.innerHTML = reviews.length ? reviews.map(review => `
+        <article class="review-card reveal"><div class="review-stars" aria-label="Оценка ${Number(review.rating) || 0} из 5">${'★'.repeat(Math.max(0, Math.min(5, Number(review.rating) || 0)))}</div><p class="review-text">«${escapeHTML(review.text)}»</p><p class="review-author">${escapeHTML(review.author)} <span class="demo-badge">демо</span></p></article>`).join('') : '<div class="empty-state">Пока нет отзывов.</div>';
+      document.dispatchEvent(new Event('ordo:reveal'));
+    });
+  </script>
+</body></html>

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+  <title>Ордо — ресторан кыргызской кухни | Вкус традиций</title>
+  <meta name="description" content="Ресторан национальной кыргызской кухни «Ордо»: бешбармак, куурдак, манты, шорпо, плов. Семейные встречи, банкеты и тои. Бронирование столиков.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Ордо — на главную">
+        <img src="assets/icons/logo-mark.svg" alt="" width="36" height="36">
+        ОРДО
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="banquets.html">Банкеты</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="achievements.html">Достижения</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="contacts.html#booking" class="btn btn-primary mobile-book">Забронировать столик</a>
+      </nav>
+      <a href="contacts.html#booking" class="btn-book">Забронировать столик</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero">
+      <img class="hero-bg" src="assets/images/hero.jpg" alt="" onerror="window.Ordo.imgFallback(this)">
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h1>Вкус традиций. Тепло гостеприимства.</h1>
+        <p>Кыргызская кухня, семейные встречи и особенные события в ресторане «Ордо»</p>
+        <div class="hero-actions">
+          <a href="menu.html" class="btn btn-secondary">Посмотреть меню</a>
+          <a href="contacts.html#booking" class="btn btn-primary">Забронировать столик</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- О РЕСТОРАНЕ -->
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <h2>О ресторане «Ордо»</h2>
+            <div class="ornament-divider" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+            </div>
+            <p>«Ордо» — это место, где традиции кыргызской кухни встречаются с уютом современного ресторана. Мы готовим бешбармак и куурдак по семейным рецептам, подаём ароматный шорпо и рассыпчатый плов.</p>
+            <p>Здесь проходят семейные обеды, свадьбы, тои и корпоративные встречи. Мы стараемся, чтобы каждый гость чувствовал тепло настоящего кыргызского гостеприимства.</p>
+            <p style="font-style:italic;font-size:0.9rem;color:var(--text-light);margin-top:20px">Демонстрационный сайт. Замените контакты и фото на реальные данные ресторана.</p>
+          </div>
+          <div class="about-image reveal">
+            <img src="assets/images/hero.jpg" alt="Уютный зал ресторана «Ордо»" loading="lazy" onerror="window.Ordo.imgFallback(this)">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФИРМЕННЫЕ БЛЮДА -->
+    <section class="section" style="background:var(--white)">
+      <div class="container">
+        <div class="section-header">
+          <h2>Фирменные блюда</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+          </div>
+          <p>Попробуйте блюда, которые готовим по традиционным рецептам</p>
+        </div>
+        <div class="dishes-grid" id="homeDishes"></div>
+        <div class="text-center" style="margin-top:36px">
+          <a href="menu.html" class="btn btn-outline">Смотреть всё меню</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- АТМОСФЕРА -->
+    <section class="section">
+      <div class="container">
+        <div class="about-grid">
+          <div class="about-image reveal">
+            <img src="assets/images/hero.jpg" alt="Атмосфера зала" loading="lazy" onerror="window.Ordo.imgFallback(this)">
+          </div>
+          <div class="about-text reveal">
+            <h2>Атмосфера зала</h2>
+            <div class="ornament-divider" aria-hidden="true" style="justify-content:flex-start">
+              <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+            </div>
+            <p>Тёплое освещение, натуральные материалы и неброский национальный орнамент создают уютную обстановку для семейного вечера или встречи с друзьями.</p>
+            <p>Для больших компаний доступны отдельные залы и VIP-комнаты.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- БАНКЕТЫ -->
+    <section class="section" style="background:var(--green);color:var(--white)">
+      <div class="container text-center">
+        <h2 style="color:var(--white)">Банкеты и тои</h2>
+        <div class="ornament-divider" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+        </div>
+        <p style="max-width:640px;margin:0 auto 32px;opacity:0.9">Организуем свадьбы, тои, дни рождения и корпоративные мероприятия. Национальная программа, расширенное меню, оформление зала.</p>
+        <a href="banquets.html" class="btn btn-primary">Обсудить мероприятие</a>
+      </div>
+    </section>
+
+    <!-- НОВОСТИ -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Новости</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+          </div>
+        </div>
+        <div class="events-grid" id="homeNewsGrid"></div>
+        <div class="text-center" style="margin-top:36px">
+          <a href="news.html" class="btn btn-outline">Все новости</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="section" style="background:var(--white)">
+      <div class="container">
+        <div class="section-header">
+          <h2>Отзывы гостей</h2>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+          </div>
+          <p style="font-size:0.9rem">Демонстрационные отзывы</p>
+        </div>
+        <div class="reviews-grid" id="homeReviews"></div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section">
+      <div class="container text-center">
+        <h2>Ждём вас в «Ордо»</h2>
+        <div class="ornament-divider" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+        </div>
+        <p style="max-width:600px;margin:0 auto 32px;color:var(--text-light)">Забронируйте столик заранее — так мы сможем подготовить для вас лучшее место.</p>
+        <a href="contacts.html#booking" class="btn btn-primary">Забронировать столик</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Ордо</h4>
+          <p style="font-size:0.9rem;opacity:0.8">Ресторан национальной кыргызской кухни. Демонстрационный сайт — заполните реальные данные в data/settings.json.</p>
+        </div>
+        <div>
+          <h4>Меню сайта</h4>
+          <a href="index.html">Главная</a>
+          <a href="menu.html">Меню</a>
+          <a href="banquets.html">Банкеты</a>
+          <a href="gallery.html">Галерея</a>
+        </div>
+        <div>
+          <h4>Контакты</h4>
+          <a href="contacts.html">Контакты и бронирование</a>
+          <a href="news.html">Новости</a>
+          <a href="achievements.html">Достижения</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        © <span id="year"></span> Ресторан «Ордо». Демонстрационный проект.
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/news.js"></script>
+  <script>
+    // Загружаем фирменные блюда и отзывы на главной
+    document.addEventListener('DOMContentLoaded', async () => {
+      const { escapeHTML, loadJSON, imgFallback } = window.Ordo;
+
+      const menu = await loadJSON('data/menu.json');
+      if (menu) {
+        const featured = menu.items.filter(i => i.featured).slice(0, 6);
+        const grid = document.getElementById('homeDishes');
+        if (grid) {
+          grid.innerHTML = featured.map(item => `
+            <article class="dish-card reveal">
+              <div class="dish-image">
+                <img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.name)}" loading="lazy" onerror="window.Ordo.imgFallback(this)">
+                <span class="dish-badge">Фирменное</span>
+              </div>
+              <div class="dish-body">
+                <h3>${escapeHTML(item.name)}</h3>
+                <p class="dish-desc">${escapeHTML(item.description)}</p>
+                <div class="dish-meta"><span>${escapeHTML(item.weight)}</span></div>
+                <div class="dish-meta"><span class="dish-price">${escapeHTML(item.price)} сом</span></div>
+                <a href="menu.html" class="dish-details-btn" style="text-align:center;display:block">Смотреть в меню</a>
+              </div>
+            </article>
+          `).join('');
+          window.Ordo && document.dispatchEvent(new Event('ordo:reveal'));
+        }
+      }
+
+      const events = await loadJSON('data/events.json');
+      if (events && events.reviews) {
+        const grid = document.getElementById('homeReviews');
+        if (grid) {
+          grid.innerHTML = events.reviews.map(r => `
+            <div class="review-card reveal">
+              <div class="review-stars">${'★'.repeat(r.rating)}${'☆'.repeat(5 - r.rating)}</div>
+              <p class="review-text">«${escapeHTML(r.text)}»</p>
+              <div class="review-author">${escapeHTML(r.author)}${r.demo ? ' <span class="demo-badge">демо</span>' : ''}</div>
+            </div>
+          `).join('');
+        }
+      }
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+  <title>Меню ресторана «Ордо» — кыргызская кухня</title>
+  <meta name="description" content="Меню ресторана «Ордо»: бешбармак, куурдак, шорпо, манты, плов, боорсоки и другие блюда кыргызской кухни. Цены в сомах.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="logo" aria-label="Ордо — на главную">
+        <img src="assets/icons/logo-mark.svg" alt="" width="36" height="36">
+        ОРДО
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="Основная навигация">
+        <ul>
+          <li><a href="index.html">Главная</a></li>
+          <li><a href="menu.html">Меню</a></li>
+          <li><a href="banquets.html">Банкеты</a></li>
+          <li><a href="gallery.html">Галерея</a></li>
+          <li><a href="news.html">Новости</a></li>
+          <li><a href="achievements.html">Достижения</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
+        <a href="contacts.html#booking" class="btn btn-primary mobile-book">Забронировать столик</a>
+      </nav>
+      <a href="contacts.html#booking" class="btn-book">Забронировать столик</a>
+      <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="nav-overlay" id="navOverlay"></div>
+
+  <main id="main">
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h1>Меню ресторана</h1>
+          <div class="ornament-divider" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 L14 10 L22 12 L14 14 L12 22 L10 14 L2 12 L10 10 Z" fill="#B99557"/></svg>
+          </div>
+          <p>Все цены указаны в кыргызских сомах. Демонстрационные позиции — замените в data/menu.json</p>
+        </div>
+
+        <div class="filters">
+          <div class="tabs" id="menuTabs" role="tablist"></div>
+          <div class="filter-row">
+            <input type="search" id="menuSearch" class="search-input" placeholder="Поиск по названию или составу…" aria-label="Поиск блюд">
+            <select id="menuSort" class="sort-select" aria-label="Сортировка">
+              <option value="default">По умолчанию</option>
+              <option value="price-asc">Цена: по возрастанию</option>
+              <option value="price-desc">Цена: по убыванию</option>
+              <option value="name">По названию</option>
+            </select>
+            <button id="menuReset" class="btn-reset">Сбросить</button>
+          </div>
+        </div>
+
+        <div class="results-count" id="resultsCount"></div>
+        <div class="dishes-grid" id="menuGrid"></div>
+        <div class="empty-state hidden" id="emptyState">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+          <p>Ничего не найдено. Попробуйте изменить фильтры.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Модальное окно блюда -->
+  <div class="modal" id="dishModal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="dishModalTitle">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Закрыть">&times;</button>
+      <div id="dishModalBody"></div>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div><h4>Ордо</h4><p style="font-size:0.9rem;opacity:0.8">Ресторан национальной кыргызской кухни.</p></div>
+        <div><h4>Меню сайта</h4><a href="index.html">Главная</a><a href="menu.html">Меню</a><a href="banquets.html">Банкеты</a><a href="gallery.html">Галерея</a></div>
+        <div><h4>Контакты</h4><a href="contacts.html">Контакты</a><a href="news.html">Новости</a><a href="achievements.html">Достижения</a></div>
+      </div>
+      <div class="footer-bottom">© <span id="year"></span> Ресторан «Ордо». Демонстрационный проект.</div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

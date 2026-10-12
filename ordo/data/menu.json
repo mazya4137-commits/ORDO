@@ -1,0 +1,264 @@
+{
+  "categories": [
+    {
+      "id": "all",
+      "name": "Все блюда"
+    },
+    {
+      "id": "national",
+      "name": "Национальные блюда"
+    },
+    {
+      "id": "soups",
+      "name": "Супы"
+    },
+    {
+      "id": "hot",
+      "name": "Горячее"
+    },
+    {
+      "id": "salads",
+      "name": "Салаты и закуски"
+    },
+    {
+      "id": "bakery",
+      "name": "Выпечка"
+    },
+    {
+      "id": "desserts",
+      "name": "Десерты"
+    },
+    {
+      "id": "drinks",
+      "name": "Напитки"
+    }
+  ],
+  "items": [
+    {
+      "id": 1,
+      "name": "Бешбармак",
+      "category": "national",
+      "description": "Традиционное блюдо из тонкого теста и отварной баранины с бульоном",
+      "composition": "Тесто, баранина, лук, бульон, зелень",
+      "weight": "450 г",
+      "price": 650,
+      "image": "assets/images/food-beshbarmak.jpg",
+      "featured": true
+    },
+    {
+      "id": 2,
+      "name": "Куурдак",
+      "category": "national",
+      "description": "Жареная баранина с луком и специями в казане",
+      "composition": "Баранина, лук, картофель, специи",
+      "weight": "350 г",
+      "price": 580,
+      "image": "assets/images/food-plov.jpg",
+      "featured": true
+    },
+    {
+      "id": 3,
+      "name": "Шорпо",
+      "category": "soups",
+      "description": "Наваристый бульон из баранины с овощами",
+      "composition": "Баранина, картофель, морковь, лук, зелень",
+      "weight": "400 мл",
+      "price": 320,
+      "image": "assets/images/food-soup.jpg",
+      "featured": true
+    },
+    {
+      "id": 4,
+      "name": "Манты с бараниной",
+      "category": "national",
+      "description": "Паровые манты с сочной начинкой",
+      "composition": "Тесто, баранина, лук, специи",
+      "weight": "300 г",
+      "price": 380,
+      "image": "assets/images/food-manty.jpg",
+      "featured": true
+    },
+    {
+      "id": 5,
+      "name": "Плов",
+      "category": "hot",
+      "description": "Рассыпчатый плов с бараниной и морковью",
+      "composition": "Рис, баранина, морковь, лук, специи",
+      "weight": "400 г",
+      "price": 450,
+      "image": "assets/images/food-plov.jpg",
+      "featured": true
+    },
+    {
+      "id": 6,
+      "name": "Боорсоки",
+      "category": "bakery",
+      "description": "Хрустящие кусочки теста, жаренные в масле",
+      "composition": "Мука, дрожжи, молоко, масло",
+      "weight": "200 г",
+      "price": 150,
+      "image": "assets/images/food-boorsok.jpg",
+      "featured": true
+    },
+    {
+      "id": 7,
+      "name": "Лагман",
+      "category": "hot",
+      "description": "Домашняя лапша с говядиной и овощами",
+      "composition": "Лапша, говядина, перец, лук, специи",
+      "weight": "450 г",
+      "price": 420,
+      "image": "assets/images/food-lagman.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Самса",
+      "category": "bakery",
+      "description": "Слоёная самса с мясом из тандыра",
+      "composition": "Тесто, мясо, лук, специи",
+      "weight": "150 г",
+      "price": 120,
+      "image": "assets/images/food-boorsok.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Ашлямфу",
+      "category": "soups",
+      "description": "Холодный острый суп с лапшой",
+      "composition": "Лапша, крахмал, уксус, перец, зелень",
+      "weight": "350 мл",
+      "price": 280,
+      "image": "assets/images/food-soup.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Салат «Ташкент»",
+      "category": "salads",
+      "description": "Свежий салат с редькой и мясом",
+      "composition": "Редька, говядина, лук, зелень",
+      "weight": "250 г",
+      "price": 320,
+      "image": "assets/images/food-salad.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Ачучук",
+      "category": "salads",
+      "description": "Салат из помидоров с луком",
+      "composition": "Помидоры, лук, зелень, масло",
+      "weight": "200 г",
+      "price": 180,
+      "image": "assets/images/food-salad.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Шашлык из баранины",
+      "category": "hot",
+      "description": "Маринованная баранина на углях",
+      "composition": "Баранина, лук, специи",
+      "weight": "250 г",
+      "price": 520,
+      "image": "assets/images/food-plov.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Долма",
+      "category": "hot",
+      "description": "Виноградные листья с мясной начинкой",
+      "composition": "Виноградные листья, рис, мясо, специи",
+      "weight": "220 г",
+      "price": 380,
+      "image": "assets/images/food-beshbarmak.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Чучвара",
+      "category": "soups",
+      "description": "Суп с мелкими пельменями",
+      "composition": "Тесто, мясо, бульон, зелень",
+      "weight": "400 мл",
+      "price": 300,
+      "image": "assets/images/food-soup.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Кымыз",
+      "category": "drinks",
+      "description": "Традиционный кобылий напиток",
+      "composition": "Кобылье молоко",
+      "weight": "250 мл",
+      "price": 180,
+      "image": "assets/images/food-tea.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Чай с молоком",
+      "category": "drinks",
+      "description": "Ароматный чай по-кыргызски",
+      "composition": "Чёрный чай, молоко",
+      "weight": "400 мл",
+      "price": 100,
+      "image": "assets/images/food-tea.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Компот из сухофруктов",
+      "category": "drinks",
+      "description": "Домашний компот",
+      "composition": "Сухофрукты, сахар, вода",
+      "weight": "300 мл",
+      "price": 120,
+      "image": "assets/images/food-tea.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Чак-чак",
+      "category": "desserts",
+      "description": "Сладкое лакомство из теста с мёдом",
+      "composition": "Тесто, мёд, орехи",
+      "weight": "200 г",
+      "price": 220,
+      "image": "assets/images/food-boorsok.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Халва",
+      "category": "desserts",
+      "description": "Восточная сладость",
+      "composition": "Семечки, сахар, мёд",
+      "weight": "150 г",
+      "price": 180,
+      "image": "assets/images/food-boorsok.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Курт",
+      "category": "desserts",
+      "description": "Солёный сушёный сыр",
+      "composition": "Кислое молоко, соль",
+      "weight": "100 г",
+      "price": 100,
+      "image": "assets/images/food-tea.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Эт-аш",
+      "category": "national",
+      "description": "Мясное ассорти по-кыргызски",
+      "composition": "Баранина, говядина, лук, зелень",
+      "weight": "400 г",
+      "price": 700,
+      "image": "assets/images/food-beshbarmak.jpg"
+    },
+    {
+      "id": 22,
+      "name": "Оромо",
+      "category": "national",
+      "description": "Рулет из тонкого теста с мясом",
+      "composition": "Тесто, мясо, лук, специи",
+      "weight": "300 г",
+      "price": 400,
+      "image": "assets/images/food-manty.jpg"
+    }
+  ]
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Банкеты и тои — ресторан «Ордо»</title>
+  <meta name="description" content="Семейные праздники, свадьбы, тои, дни рождения и корпоративные встречи в ресторане «Ордо». Узнайте условия и обсудите мероприятие.">
+  <link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Ордо — на главную"><img src="assets/icons/logo-mark.svg" alt="" width="36" height="36">РћР ДО</a>
+    <nav class="main-nav" id="mainNav" aria-label="Основная навигация"><ul>
+      <li><a href="index.html">Главная</a></li><li><a href="menu.html">Меню</a></li><li><a href="banquets.html">Банкеты</a></li><li><a href="gallery.html">Галерея</a></li><li><a href="news.html">Новости</a></li><li><a href="achievements.html">События</a></li><li><a href="contacts.html">Контакты</a></li>
+    </ul><a href="#eventForm" class="btn btn-primary mobile-book">Обсудить мероприятие</a></nav>
+    <a href="#eventForm" class="btn-book">Обсудить мероприятие</a><button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div></header><div class="nav-overlay" id="navOverlay"></div>
+  <main id="main">
+    <section class="section"><div class="container">
+      <div class="section-header"><p class="eyebrow">Поводы собраться вместе</p><h1>Банкеты и тои</h1><div class="ornament-divider" aria-hidden="true"><img src="assets/icons/ornament.svg" alt=""></div><p>Поможем продумать угощение и пространство для семейного праздника, свадьбы, дня рождения или встречи команды.</p><p class="demo-note">Фотографии на странице созданы для демонстрации и не показывают реальный зал ресторана.</p></div>
+      <div class="events-grid">
+        <article class="event-card reveal"><img src="assets/images/hero.jpg" alt="Семейный праздничный стол" loading="lazy" onerror="window.Ordo.imgFallback(this)"><div class="event-body"><h2>Семейные праздники</h2><p class="card-copy">Юбилеи, встречи родных и большие семейные обеды. Подберём подачу и меню под формат встречи.</p></div></article>
+        <article class="event-card reveal"><img src="assets/images/interior.jpg" alt="Праздничное оформление стола" loading="lazy" onerror="window.Ordo.imgFallback(this)"><div class="event-body"><h2>Свадьбы и тои</h2><p class="card-copy">Обсудим рассадку, оформление и национальные блюда. Программа и условия согласуются индивидуально.</p></div></article>
+        <article class="event-card reveal"><img src="assets/images/food-boorsok.jpg" alt="Десерт для праздничного события" loading="lazy" onerror="window.Ordo.imgFallback(this)"><div class="event-body"><h2>Дни рождения</h2><p class="card-copy">Соберём праздничный стол для детей и взрослых, учитывая пожелания к меню.</p></div></article>
+        <article class="event-card reveal"><img src="assets/images/hero.jpg" alt="Общий стол для встречи гостей" loading="lazy" onerror="window.Ordo.imgFallback(this)"><div class="event-body"><h2>Корпоративные встречи</h2><p class="card-copy">Уютное место для командного ужина, деловой встречи или сезонного праздника.</p></div></article>
+      </div>
+      <div class="capacity-note"><div><span class="eyebrow">Вместимость залов <span class="demo-badge">демо</span></span><p>Основной зал: <strong id="capacityHall">уточните у ресторана</strong><br>VIP-зал: <strong id="capacityVip">уточните у ресторана</strong><br>Банкет: <strong id="capacityBanquet">уточните у ресторана</strong></p></div><p id="capacityNote">Доступность дат и условия уточняются при обращении. Параметры можно изменить в <code>data/settings.json</code>.</p></div>
+    </div></section>
+    <section class="section section-soft" id="eventForm"><div class="container"><div class="form-card">
+      <div class="section-header"><p class="eyebrow">Р асскажите о планах</p><h2>Обсудить мероприятие</h2><p>Подготовьте заявку и отправьте её в WhatsApp. Бронирование и условия подтвердит сотрудник ресторана.</p></div>
+      <form id="bookingForm" novalidate>
+        <div class="form-grid"><div class="form-group"><label for="bookingName">РРјСЏ <span class="required">*</span></label><input id="bookingName" name="name" autocomplete="name" required><div class="error">Укажите имя</div></div>
+          <div class="form-group"><label for="bookingPhone">Телефон <span class="required">*</span></label><input id="bookingPhone" name="phone" type="tel" autocomplete="tel" placeholder="+996 ___ ___ ___" required><div class="error">Проверьте номер телефона</div></div>
+          <div class="form-group"><label for="bookingDate">Дата <span class="required">*</span></label><input id="bookingDate" name="date" type="date" required><div class="error">Выберите сегодняшнюю или будущую дату</div></div>
+          <div class="form-group"><label for="bookingTime">Время <span class="required">*</span></label><input id="bookingTime" name="time" type="time" required><div class="error">Выберите время работы ресторана</div></div>
+          <div class="form-group"><label for="bookingGuests">Количество гостей <span class="required">*</span></label><input id="bookingGuests" name="guests" type="number" min="1" max="500" value="20" required><div class="error">Укажите от 1 до 500 гостей</div></div>
+          <div class="form-group"><label for="eventType">Тип события</label><select id="eventType" name="eventType"><option>Семейный праздник</option><option>Свадьба или той</option><option>День рождения</option><option>Корпоратив</option><option>Другое</option></select></div></div>
+        <div class="form-group"><label for="bookingComment">Пожелания</label><textarea id="bookingComment" name="comment" rows="4" placeholder="Р асскажите о формате, меню или других пожеланиях"></textarea></div>
+        <p class="form-note">Отправьте сообщение в WhatsApp. Мероприятие и дата считаются подтверждёнными только после ответа ресторана.</p>
+        <div class="form-actions"><button type="submit" class="btn btn-primary">Подготовить заявку</button></div>
+      </form>
+      <p id="bookingStatus" class="booking-status" role="status" aria-live="polite"></p><div id="bookingPreviewWrap" class="booking-preview hidden"><h3>Текст заявки</h3><pre id="bookingPreview"></pre><button type="button" class="btn btn-outline" id="copyBooking">Скопировать заявку</button></div>
+    </div></div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h4>Ордо</h4><p>Кыргызская кухня и тёплое гостеприимство.</p></div><div><h4>Р азделы</h4><a href="menu.html">Меню</a><a href="gallery.html">Галерея</a><a href="news.html">Новости</a></div><div><h4>Будем на связи</h4><a href="contacts.html">Контакты и бронирование</a><a href="achievements.html">События</a></div></div><div class="footer-bottom">В© <span id="year"></span> Р есторан «Ордо». Демонстрационный сайт.</div></div></footer>
+  <script src="js/main.js"></script><script src="js/booking.js"></script>
+  <script>document.addEventListener('DOMContentLoaded', async () => { const settings = await window.Ordo.loadJSON('data/settings.json'); if (!settings || !settings.capacity) return; document.getElementById('capacityHall').textContent = settings.capacity.hall || 'не указано'; document.getElementById('capacityVip').textContent = settings.capacity.vip || 'не указано'; document.getElementById('capacityBanquet').textContent = settings.capacity.banquet || 'не указано'; if (settings.note) document.getElementById('capacityNote').textContent = settings.note; });</script>
+</body></html>
+

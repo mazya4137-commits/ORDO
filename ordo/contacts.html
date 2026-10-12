@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Контакты и бронирование — ресторан «Ордо»</title>
+  <meta name="description" content="Контактная информация ресторана «Ордо» и заявка на бронирование столика. Фактические адрес и телефон указываются владельцем в настройках.">
+  <link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css"><link rel="stylesheet" href="css/responsive.css"><link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+  <header class="site-header"><div class="header-inner">
+    <a href="index.html" class="logo" aria-label="Ордо — на главную"><img src="assets/icons/logo-mark.svg" alt="" width="36" height="36">ОРДО</a>
+    <nav class="main-nav" id="mainNav" aria-label="Основная навигация"><ul>
+      <li><a href="index.html">Главная</a></li><li><a href="menu.html">Меню</a></li><li><a href="banquets.html">Банкеты</a></li><li><a href="gallery.html">Галерея</a></li><li><a href="news.html">Новости</a></li><li><a href="achievements.html">События</a></li><li><a href="contacts.html">Контакты</a></li>
+    </ul><a href="#booking" class="btn btn-primary mobile-book">Забронировать столик</a></nav>
+    <a href="#booking" class="btn-book">Забронировать столик</a><button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
+  </div></header><div class="nav-overlay" id="navOverlay"></div>
+  <main id="main">
+    <section class="section"><div class="container">
+      <div class="section-header"><p class="eyebrow">Будем рады встрече</p><h1>Контакты и бронирование</h1><div class="ornament-divider" aria-hidden="true"><img src="assets/icons/ornament.svg" alt=""></div><p>Оставьте заявку, чтобы обсудить удобное время. Бронь считается подтверждённой только после ответа ресторана.</p></div>
+      <div class="contacts-grid">
+        <div class="contact-panel">
+          <h2>Как нас найти</h2>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true">⌖</span><div><h4>Адрес</h4><p data-setting="address">Адрес будет добавлен владельцем ресторана.</p></div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true">◷</span><div><h4>Часы работы <span class="demo-badge">пример</span></h4><p id="workHours">Ежедневно, 10:00–23:00</p></div></div>
+          <div class="contact-item"><span class="contact-icon" aria-hidden="true">☎</span><div><h4>Телефон</h4><p><a data-setting="phone" data-href-prefix="tel:" href="contacts.html#booking">Телефон будет добавлен владельцем</a></p></div></div>
+          <div class="contact-links"><a class="btn btn-outline hidden" id="whatsappLink" target="_blank" rel="noopener">Написать в WhatsApp</a><a class="social-link hidden" id="instagramLink" target="_blank" rel="noopener">Instagram</a><a class="social-link hidden" id="mapLink" target="_blank" rel="noopener">Открыть карту</a></div>
+          <p class="form-note">Контактные данные намеренно не придуманы. Добавьте телефон, адрес, WhatsApp, Instagram и ссылку на карту в <code>data/settings.json</code>.</p>
+        </div>
+        <div class="booking-panel" id="booking">
+          <h2>Заявка на столик</h2>
+          <p class="form-note">Отправьте сообщение в WhatsApp. Бронирование действует после подтверждения рестораном. Если номер ещё не указан, скопируйте текст заявки и отправьте его удобным способом.</p>
+          <form id="bookingForm" novalidate>
+            <div class="form-group"><label for="bookingName">Имя <span class="required">*</span></label><input id="bookingName" name="name" autocomplete="name" required><div class="error">Укажите имя</div></div>
+            <div class="form-group"><label for="bookingPhone">Телефон <span class="required">*</span></label><input id="bookingPhone" name="phone" type="tel" autocomplete="tel" placeholder="+996 ___ ___ ___" required><div class="error">Проверьте номер телефона</div></div>
+            <div class="form-grid"><div class="form-group"><label for="bookingDate">Дата <span class="required">*</span></label><input id="bookingDate" name="date" type="date" required><div class="error">Выберите сегодняшнюю или будущую дату</div></div>
+            <div class="form-group"><label for="bookingTime">Время <span class="required">*</span></label><input id="bookingTime" name="time" type="time" required><div class="error">Выберите время работы ресторана</div></div></div>
+            <div class="form-group"><label for="bookingGuests">Количество гостей <span class="required">*</span></label><input id="bookingGuests" name="guests" type="number" min="1" max="500" value="2" required><div class="error">Укажите от 1 до 500 гостей</div></div>
+            <div class="form-group"><label for="bookingComment">Комментарий</label><textarea id="bookingComment" name="comment" rows="3" placeholder="Пожелания к столику или встрече"></textarea></div>
+            <div class="form-actions"><button type="submit" class="btn btn-primary">Подготовить заявку</button></div>
+          </form>
+          <p id="bookingStatus" class="booking-status" role="status" aria-live="polite"></p>
+          <div id="bookingPreviewWrap" class="booking-preview hidden"><h3>Текст заявки</h3><pre id="bookingPreview"></pre><button type="button" class="btn btn-outline" id="copyBooking">Скопировать заявку</button></div>
+        </div>
+      </div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-grid"><div><h4>Ордо</h4><p>Кыргызская кухня и тёплое гостеприимство.</p></div><div><h4>Разделы</h4><a href="menu.html">Меню</a><a href="banquets.html">Банкеты</a><a href="gallery.html">Галерея</a></div><div><h4>Будем на связи</h4><a href="news.html">Новости</a><a href="achievements.html">События</a></div></div><div class="footer-bottom">© <span id="year"></span> Ресторан «Ордо». Демонстрационный сайт.</div></div></footer>
+  <script src="js/main.js"></script><script src="js/booking.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async () => {
+      const settings = await window.Ordo.loadJSON('data/settings.json');
+      if (!settings) return;
+      const wa = document.getElementById('whatsappLink');
+      if (settings.whatsapp) { wa.href = `https://wa.me/${settings.whatsapp.replace(/\D/g, '')}`; wa.classList.remove('hidden'); }
+      const instagram = document.getElementById('instagramLink');
+      if (settings.instagram) { instagram.href = /^https?:/.test(settings.instagram) ? settings.instagram : `https://instagram.com/${settings.instagram.replace(/^@/, '')}`; instagram.classList.remove('hidden'); }
+      const map = document.getElementById('mapLink');
+      if (settings.mapUrl) { map.href = settings.mapUrl; map.classList.remove('hidden'); }
+    });
+  </script>
+</body></html>
